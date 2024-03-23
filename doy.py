@@ -8,6 +8,7 @@ dateParts = []
 
 def getDaysInMonth(monthNum, yearNum):
 	# Return number of days in month provided.  
+	
 	maxDaysInMonth = 0
 	
 	if (monthNum <= 7):
@@ -33,6 +34,7 @@ def getDaysInMonth(monthNum, yearNum):
 	
 
 def isDateValid(rawDate):
+	# Returns true if the date specified is in mm/dd/yyyy format
 
 	bValid = False
 	rawDateParts = rawDate.split("/")
@@ -65,6 +67,7 @@ def isDateValid(rawDate):
 
 def countDaysToDate(rawDate):
 	# Return number of days between Jan 1 and date specified, inclusive.
+	
 	dayCount = 0 
 	
 	# add days for full months up to the month specified
@@ -83,5 +86,5 @@ if (isDateValid(rawDate)):
 	dayCount = countDaysToDate(rawDate)
 	print(f"Number of days (aka Julian Day) to {rawDate} is {dayCount}")
 else:
-	print("Unable to interpret date provided.")
+	print(f"Unable to interpret date {rawDate} provided.")
 	
